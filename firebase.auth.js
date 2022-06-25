@@ -9,7 +9,7 @@ const auth = app.auth();
 const ui = new firebaseui.auth.AuthUI(auth);
 
 export default {
-  signOut: () => "TODO",
+  signOut: () => () => auth.signOut(),
   onChanged: (callback) => auth.onAuthStateChanged(callback),
   uiStart: (target) =>
     ui.start(target, {
