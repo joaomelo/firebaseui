@@ -11,7 +11,7 @@ const ui = new firebaseui.auth.AuthUI(auth);
 export default {
   signOut: () => "TODO",
   onChanged: (callback) => auth.onAuthStateChanged(callback),
-  uiStart: () => (target) =>
+  uiStart: (target) =>
     ui.start(target, {
       signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
